@@ -43,8 +43,8 @@ Este proyecto proporciona dos librerías especializadas que trabajan en conjunto
 ## 🔧 Dependencias
 
 ### Requeridas
-- **SourceMod 1.10+**
-- **[Localizer](https://github.com/Kxnrl/sm-ext-LocalizationEx)** - Para traducciones Valve
+- **SourceMod 1.11+**
+- **[SM-Localizer](https://github.com/dragokas/SM-Localizer/)** - Para traducciones Valve
 - **[Left4DHooks](https://github.com/SilvDev/Left4DHooks)** - Para información de modo de juego
 
 ### Opcionales
