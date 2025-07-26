@@ -894,13 +894,6 @@ public void OnMapStart()
 | `c11` | Dead Air | `#L4D360UI_CampaignName_C11` |
 | `c12` | Blood Harvest | `#L4D360UI_CampaignName_C12` |
 
-## 🔗 Referencias
-
-- [Left4DHooks Documentation](https://github.com/SilvDev/Left4DHooks)
-- [L4D2 Game Mode Constants](https://github.com/SilvDev/Left4DHooks/blob/master/left4dhooks.inc)
-- [Valve Translation Keys Database](https://github.com/L4D2Scripters/l4d2-translation-keys)
-- [Language Manager Documentation](language_manager.md)
-
 ---
 
 **Siguiente:** [Ejemplos de Integración](examples.md)

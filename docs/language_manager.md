@@ -535,12 +535,6 @@ if (Lang_IsRomanceLanguage(clientLang)) { }
 if (clientLang == LANGID_SPANISH || clientLang == LANGID_FRENCH || ...) { }
 ```
 
-## 🔗 Referencias
-
-- [SourceMod Language System](https://wiki.alliedmods.net/Multi-Language_Phrases_(SourceMod_Scripting))
-- [Localizer Extension](https://github.com/Kxnrl/sm-ext-LocalizationEx)
-- [L4D2 Valve Translation Keys](https://github.com/L4D2Scripters/l4d2-translation-keys)
-
 ---
 
 **Siguiente:** [Campaign Manager Documentation](campaign_manager.md)

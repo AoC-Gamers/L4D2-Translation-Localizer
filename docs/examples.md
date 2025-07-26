@@ -2,6 +2,9 @@
 
 Ejemplos prácticos de uso conjunto de `language_manager.inc` y `campaign_manager.inc` en plugins reales.
 
+> **⚠️ NOTA IMPORTANTE**: Estos ejemplos usan SM-Localizer para acceder a traducciones Valve intrínsecas del juego. 
+> El constructor `new Localizer()` sin parámetros inicializa el sistema para usar traducciones oficiales de Valve.
+
 ## 📋 Plugin Base Template
 
 ### Estructura Básica
@@ -29,19 +32,27 @@ Localizer g_Localizer;
 public void OnPluginStart()
 {
     // Inicializar Localizer
-    g_Localizer = new Localizer("ruta/a/tu/archivo.phrases.txt");
+    g_Localizer = new Localizer();
+    g_Localizer.Delegate_InitCompleted(OnPhrasesReady);
     
     // Registrar comandos
     RegConsoleCmd("sm_mapinfo", CMD_MapInfo, "Mostrar información del mapa actual");
     RegConsoleCmd("sm_language", CMD_Language, "Mostrar información de idioma");
 }
 
+public void OnPhrasesReady()
+{
+    // Localizer está listo para usar traducciones Valve
+    LogMessage("Sistema de localización inicializado correctamente");
+}
+
 public void OnAllPluginsLoaded()
 {
-    // Asegurar que Localizer esté listo
+    // Verificar que Localizer esté listo
     if (!g_Localizer.IsReady())
     {
-        SetFailState("No se pudo inicializar el sistema de localización");
+        LogError("Localizer no está listo - algunas traducciones pueden fallar");
+        // No usar SetFailState aquí, el sistema puede tardar en inicializarse
     }
 }
 ```
@@ -148,13 +159,21 @@ bool g_VoteInProgress = false;
 
 public void OnPluginStart()
 {
-    // ... inicialización base ...
+    // Inicializar Localizer
+    g_Localizer = new Localizer();
+    g_Localizer.Delegate_InitCompleted(OnPhrasesReady);
     
     g_MapVotes = new StringMap();
     LoadMapPool();
     
     RegAdminCmd("sm_votemapa", CMD_VoteMap, ADMFLAG_CHANGEMAP, "Iniciar votación de mapa");
     RegConsoleCmd("sm_mapas", CMD_ListMaps, "Ver mapas disponibles");
+}
+
+public void OnPhrasesReady()
+{
+    // Localizer está listo para usar traducciones Valve
+    LogMessage("Sistema de localización inicializado correctamente");
 }
 
 void LoadMapPool()
@@ -188,9 +207,10 @@ public Action CMD_ListMaps(int client, int args)
     
     char clientLang[32];
     Lang_GetSafeClientLanguage(client, clientLang, sizeof(clientLang));
+    LanguageID langId = Lang_GetClientLanguage(client);
     
     // Título localizado
-    if (Lang_IsSpanishVariant(Lang_GetClientLanguage(client)))
+    if (Lang_IsSpanishVariant(langId))
     {
         PrintToChat(client, "\x04=== Mapas Disponibles ===");
     }
@@ -488,7 +508,9 @@ StringMap g_LanguageStats;
 
 public void OnPluginStart()
 {
-    // ... inicialización base ...
+    // Inicializar Localizer
+    g_Localizer = new Localizer();
+    g_Localizer.Delegate_InitCompleted(OnPhrasesReady);
     
     g_CampaignPlayTime = new StringMap();
     g_LanguageStats = new StringMap();
@@ -500,6 +522,12 @@ public void OnPluginStart()
     HookEvent("player_death", Event_PlayerDeath);
     HookEvent("revive_success", Event_ReviveSuccess);
     HookEvent("heal_success", Event_HealSuccess);
+}
+
+public void OnPhrasesReady()
+{
+    // Localizer está listo para usar traducciones Valve
+    LogMessage("Sistema de localización inicializado correctamente");
 }
 
 public void OnClientPostAdminCheck(int client)
@@ -811,7 +839,9 @@ int g_AchievementCount = 0;
 
 public void OnPluginStart()
 {
-    // ... inicialización base ...
+    // Inicializar Localizer
+    g_Localizer = new Localizer();
+    g_Localizer.Delegate_InitCompleted(OnPhrasesReady);
     
     RegConsoleCmd("sm_logros", CMD_Achievements, "Ver logros disponibles");
     RegConsoleCmd("sm_achievements", CMD_Achievements, "View available achievements");
@@ -822,6 +852,12 @@ public void OnPluginStart()
     HookEvent("player_death", Event_PlayerDeath_Achievement);
     HookEvent("heal_success", Event_HealSuccess_Achievement);
     HookEvent("revive_success", Event_ReviveSuccess_Achievement);
+}
+
+public void OnPhrasesReady()
+{
+    // Localizer está listo para usar traducciones Valve
+    LogMessage("Sistema de localización inicializado correctamente");
 }
 
 void LoadAchievements()
@@ -1187,7 +1223,8 @@ public void OnPluginStart()
 {
     // ORDEN IMPORTANTE:
     // 1. Inicializar Localizer primero
-    g_Localizer = new Localizer("tu_archivo.phrases.txt");
+    g_Localizer = new Localizer();
+    g_Localizer.Delegate_InitCompleted(OnPhrasesReady);
     
     // 2. Verificar dependencias
     if (!LibraryExists("left4dhooks"))
@@ -1200,6 +1237,12 @@ public void OnPluginStart()
     
     // 4. Configurar timers si es necesario
     CreateTimer(1.0, Timer_CheckReady, _, TIMER_REPEAT | TIMER_FLAG_NO_MAPCHANGE);
+}
+
+public void OnPhrasesReady()
+{
+    // Localizer está listo para usar traducciones Valve
+    LogMessage("Sistema de localización inicializado correctamente");
 }
 
 public void OnAllPluginsLoaded()
