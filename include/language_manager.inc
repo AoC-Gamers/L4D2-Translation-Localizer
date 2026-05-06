@@ -18,7 +18,7 @@
  */
 
 #if defined _language_manager_included
-	#endinput
+    #endinput
 #endif
 #define _language_manager_included
 
@@ -26,7 +26,7 @@
 #include <localizer>
 
 /*****************************************************************
-			L A N G U A G E   E N U M E R A T I O N
+            L A N G U A G E   E N U M E R A T I O N
 *****************************************************************/
 
 /**
@@ -35,135 +35,135 @@
  */
 enum LanguageID
 {
-	LANGID_ARABIC	  = 0,	   // ar - arabic
-	LANGID_BULGARIAN  = 1,	   // bg - bulgarian
-	LANGID_SCHINESE	  = 2,	   // chi - schinese (Simplified Chinese)
-	LANGID_CZECH	  = 3,	   // cze - czech
-	LANGID_DANISH	  = 4,	   // da - danish
-	LANGID_GERMAN	  = 5,	   // de - german
-	LANGID_GREEK	  = 6,	   // el - greek
-	LANGID_ENGLISH	  = 7,	   // en - english
-	LANGID_SPANISH	  = 8,	   // es - spanish
-	LANGID_FINNISH	  = 9,	   // fi - finnish
-	LANGID_FRENCH	  = 10,	   // fr - french
-	LANGID_HEBREW	  = 11,	   // he - hebrew
-	LANGID_HUNGARIAN  = 12,	   // hu - hungarian
-	LANGID_ITALIAN	  = 13,	   // it - italian
-	LANGID_JAPANESE	  = 14,	   // jp - japanese
-	LANGID_KOREAN	  = 15,	   // ko - korean
-	LANGID_LATAM	  = 16,	   // las - latam (Latin American Spanish)
-	LANGID_LITHUANIAN = 17,	   // lt - lithuanian
-	LANGID_LATVIAN	  = 18,	   // lv - latvian
-	LANGID_DUTCH	  = 19,	   // nl - dutch
-	LANGID_NORWEGIAN  = 20,	   // no - norwegian
-	LANGID_POLISH	  = 21,	   // pl - polish
-	LANGID_BRAZILIAN  = 22,	   // pt - brazilian
-	LANGID_PORTUGUESE = 23,	   // pt_p - portuguese
-	LANGID_ROMANIAN	  = 24,	   // ro - romanian
-	LANGID_RUSSIAN	  = 25,	   // ru - russian
-	LANGID_SLOVAK	  = 26,	   // sk - slovak
-	LANGID_SWEDISH	  = 27,	   // sv - swedish
-	LANGID_THAI		  = 28,	   // th - thai
-	LANGID_TURKISH	  = 29,	   // tr - turkish
-	LANGID_UKRAINIAN  = 30,	   // ua - ukrainian
-	LANGID_VIETNAMESE = 31,	   // vi - vietnamese
-	LANGID_TCHINESE	  = 32,	   // zho - tchinese (Traditional Chinese)
-	LANGID_SIZE				   // Total number of languages (33)
+    LANGID_ARABIC      = 0,       // ar - arabic
+    LANGID_BULGARIAN  = 1,       // bg - bulgarian
+    LANGID_SCHINESE      = 2,       // chi - schinese (Simplified Chinese)
+    LANGID_CZECH      = 3,       // cze - czech
+    LANGID_DANISH      = 4,       // da - danish
+    LANGID_GERMAN      = 5,       // de - german
+    LANGID_GREEK      = 6,       // el - greek
+    LANGID_ENGLISH      = 7,       // en - english
+    LANGID_SPANISH      = 8,       // es - spanish
+    LANGID_FINNISH      = 9,       // fi - finnish
+    LANGID_FRENCH      = 10,       // fr - french
+    LANGID_HEBREW      = 11,       // he - hebrew
+    LANGID_HUNGARIAN  = 12,       // hu - hungarian
+    LANGID_ITALIAN      = 13,       // it - italian
+    LANGID_JAPANESE      = 14,       // jp - japanese
+    LANGID_KOREAN      = 15,       // ko - korean
+    LANGID_LATAM      = 16,       // las - latam (Latin American Spanish)
+    LANGID_LITHUANIAN = 17,       // lt - lithuanian
+    LANGID_LATVIAN      = 18,       // lv - latvian
+    LANGID_DUTCH      = 19,       // nl - dutch
+    LANGID_NORWEGIAN  = 20,       // no - norwegian
+    LANGID_POLISH      = 21,       // pl - polish
+    LANGID_BRAZILIAN  = 22,       // pt - brazilian
+    LANGID_PORTUGUESE = 23,       // pt_p - portuguese
+    LANGID_ROMANIAN      = 24,       // ro - romanian
+    LANGID_RUSSIAN      = 25,       // ru - russian
+    LANGID_SLOVAK      = 26,       // sk - slovak
+    LANGID_SWEDISH      = 27,       // sv - swedish
+    LANGID_THAI          = 28,       // th - thai
+    LANGID_TURKISH      = 29,       // tr - turkish
+    LANGID_UKRAINIAN  = 30,       // ua - ukrainian
+    LANGID_VIETNAMESE = 31,       // vi - vietnamese
+    LANGID_TCHINESE      = 32,       // zho - tchinese (Traditional Chinese)
+    LANGID_SIZE                   // Total number of languages (33)
 }
 
 /*****************************************************************
-			L A N G U A G E   A R R A Y S
+            L A N G U A G E   A R R A Y S
 *****************************************************************/
 
 // Language name strings array corresponding to LanguageID enumeration
 // Indices match exactly with LanguageID values
 stock char sLanguageNames[LANGID_SIZE][] = {
-	"arabic",		 // LANGID_ARABIC = 0
-	"bulgarian",	 // LANGID_BULGARIAN = 1
-	"schinese",		 // LANGID_SCHINESE = 2 (Simplified Chinese)
-	"czech",		 // LANGID_CZECH = 3 
-	"danish",		 // LANGID_DANISH = 4
-	"german",		 // LANGID_GERMAN = 5
-	"greek",		 // LANGID_GREEK = 6
-	"english",		 // LANGID_ENGLISH = 7
-	"spanish",		 // LANGID_SPANISH = 8
-	"finnish",		 // LANGID_FINNISH = 9
-	"french",		 // LANGID_FRENCH = 10
-	"hebrew",		 // LANGID_HEBREW = 11
-	"hungarian",	 // LANGID_HUNGARIAN = 12
-	"italian",		 // LANGID_ITALIAN = 13
-	"japanese",		 // LANGID_JAPANESE = 14
-	"korean",		 // LANGID_KOREAN = 15
-	"spanish",		 // LANGID_LATAM = 16 (Latin American Spanish)
-	"lithuanian",	 // LANGID_LITHUANIAN = 17
-	"latvian",		 // LANGID_LATVIAN = 18
-	"dutch",		 // LANGID_DUTCH = 19
-	"norwegian",	 // LANGID_NORWEGIAN = 20
-	"polish",		 // LANGID_POLISH = 21
-	"brazilian",	 // LANGID_BRAZILIAN = 22
-	"portuguese",	 // LANGID_PORTUGUESE = 23
-	"romanian",		 // LANGID_ROMANIAN = 24
-	"russian",		 // LANGID_RUSSIAN = 25
-	"slovak",		 // LANGID_SLOVAK = 26
-	"swedish",		 // LANGID_SWEDISH = 27
-	"thai",			 // LANGID_THAI = 28
-	"turkish",		 // LANGID_TURKISH = 29
-	"ukrainian",	 // LANGID_UKRAINIAN = 30
-	"vietnamese",	 // LANGID_VIETNAMESE = 31
-	"tchinese"		 // LANGID_TCHINESE = 32 (Traditional Chinese)
+    "arabic",         // LANGID_ARABIC = 0
+    "bulgarian",     // LANGID_BULGARIAN = 1
+    "schinese",         // LANGID_SCHINESE = 2 (Simplified Chinese)
+    "czech",         // LANGID_CZECH = 3
+    "danish",         // LANGID_DANISH = 4
+    "german",         // LANGID_GERMAN = 5
+    "greek",         // LANGID_GREEK = 6
+    "english",         // LANGID_ENGLISH = 7
+    "spanish",         // LANGID_SPANISH = 8
+    "finnish",         // LANGID_FINNISH = 9
+    "french",         // LANGID_FRENCH = 10
+    "hebrew",         // LANGID_HEBREW = 11
+    "hungarian",     // LANGID_HUNGARIAN = 12
+    "italian",         // LANGID_ITALIAN = 13
+    "japanese",         // LANGID_JAPANESE = 14
+    "korean",         // LANGID_KOREAN = 15
+    "spanish",         // LANGID_LATAM = 16 (Latin American Spanish)
+    "lithuanian",     // LANGID_LITHUANIAN = 17
+    "latvian",         // LANGID_LATVIAN = 18
+    "dutch",         // LANGID_DUTCH = 19
+    "norwegian",     // LANGID_NORWEGIAN = 20
+    "polish",         // LANGID_POLISH = 21
+    "brazilian",     // LANGID_BRAZILIAN = 22
+    "portuguese",     // LANGID_PORTUGUESE = 23
+    "romanian",         // LANGID_ROMANIAN = 24
+    "russian",         // LANGID_RUSSIAN = 25
+    "slovak",         // LANGID_SLOVAK = 26
+    "swedish",         // LANGID_SWEDISH = 27
+    "thai",             // LANGID_THAI = 28
+    "turkish",         // LANGID_TURKISH = 29
+    "ukrainian",     // LANGID_UKRAINIAN = 30
+    "vietnamese",     // LANGID_VIETNAMESE = 31
+    "tchinese"         // LANGID_TCHINESE = 32 (Traditional Chinese)
 };
 
 // Array of original language codes (as they appear in SourceMod)
 stock char sLanguageCodes[LANGID_SIZE][] = {
-	"ar",	   // LANGID_ARABIC = 0
-	"bg",	   // LANGID_BULGARIAN = 1
-	"chi",	   // LANGID_SCHINESE = 2 (Simplified Chinese)
-	"cze",	   // LANGID_CZECH = 3
-	"da",	   // LANGID_DANISH = 4
-	"de",	   // LANGID_GERMAN = 5
-	"el",	   // LANGID_GREEK = 6
-	"en",	   // LANGID_ENGLISH = 7
-	"es",	   // LANGID_SPANISH = 8
-	"fi",	   // LANGID_FINNISH = 9
-	"fr",	   // LANGID_FRENCH = 10
-	"he",	   // LANGID_HEBREW = 11
-	"hu",	   // LANGID_HUNGARIAN = 12
-	"it",	   // LANGID_ITALIAN = 13
-	"jp",	   // LANGID_JAPANESE = 14
-	"ko",	   // LANGID_KOREAN = 15
-	"las",	   // LANGID_LATAM = 16 (Latin American Spanish)
-	"lt",	   // LANGID_LITHUANIAN = 17
-	"lv",	   // LANGID_LATVIAN = 18
-	"nl",	   // LANGID_DUTCH = 19
-	"no",	   // LANGID_NORWEGIAN = 20
-	"pl",	   // LANGID_POLISH = 21
-	"pt",	   // LANGID_BRAZILIAN = 22
-	"pt_p",	   // LANGID_PORTUGUESE = 23
-	"ro",	   // LANGID_ROMANIAN = 24
-	"ru",	   // LANGID_RUSSIAN = 25
-	"sk",	   // LANGID_SLOVAK = 26
-	"sv",	   // LANGID_SWEDISH = 27
-	"th",	   // LANGID_THAI = 28
-	"tr",	   // LANGID_TURKISH = 29
-	"ua",	   // LANGID_UKRAINIAN = 30
-	"vi",	   // LANGID_VIETNAMESE = 31
-	"zho"	   // LANGID_TCHINESE = 32 (Traditional Chinese)
+    "ar",       // LANGID_ARABIC = 0
+    "bg",       // LANGID_BULGARIAN = 1
+    "chi",       // LANGID_SCHINESE = 2 (Simplified Chinese)
+    "cze",       // LANGID_CZECH = 3
+    "da",       // LANGID_DANISH = 4
+    "de",       // LANGID_GERMAN = 5
+    "el",       // LANGID_GREEK = 6
+    "en",       // LANGID_ENGLISH = 7
+    "es",       // LANGID_SPANISH = 8
+    "fi",       // LANGID_FINNISH = 9
+    "fr",       // LANGID_FRENCH = 10
+    "he",       // LANGID_HEBREW = 11
+    "hu",       // LANGID_HUNGARIAN = 12
+    "it",       // LANGID_ITALIAN = 13
+    "jp",       // LANGID_JAPANESE = 14
+    "ko",       // LANGID_KOREAN = 15
+    "las",       // LANGID_LATAM = 16 (Latin American Spanish)
+    "lt",       // LANGID_LITHUANIAN = 17
+    "lv",       // LANGID_LATVIAN = 18
+    "nl",       // LANGID_DUTCH = 19
+    "no",       // LANGID_NORWEGIAN = 20
+    "pl",       // LANGID_POLISH = 21
+    "pt",       // LANGID_BRAZILIAN = 22
+    "pt_p",       // LANGID_PORTUGUESE = 23
+    "ro",       // LANGID_ROMANIAN = 24
+    "ru",       // LANGID_RUSSIAN = 25
+    "sk",       // LANGID_SLOVAK = 26
+    "sv",       // LANGID_SWEDISH = 27
+    "th",       // LANGID_THAI = 28
+    "tr",       // LANGID_TURKISH = 29
+    "ua",       // LANGID_UKRAINIAN = 30
+    "vi",       // LANGID_VIETNAMESE = 31
+    "zho"       // LANGID_TCHINESE = 32 (Traditional Chinese)
 };
 
 /*****************************************************************
-			L A N G U A G E   M A S K S   &   C O N S T A N T S
+            L A N G U A G E   M A S K S   &   C O N S T A N T S
 *****************************************************************/
 
 // Bit masks for fast multiple language checks
-#define LANGMASK_ROMANCE_LANGUAGES	 ((1 << view_as<int>(LANGID_SPANISH)) | (1 << view_as<int>(LANGID_LATAM)) | (1 << view_as<int>(LANGID_FRENCH)) | (1 << view_as<int>(LANGID_ITALIAN)) | (1 << view_as<int>(LANGID_PORTUGUESE)) | (1 << view_as<int>(LANGID_BRAZILIAN)) | (1 << view_as<int>(LANGID_ROMANIAN)))
-#define LANGMASK_GERMANIC_LANGUAGES	 ((1 << view_as<int>(LANGID_ENGLISH)) | (1 << view_as<int>(LANGID_GERMAN)) | (1 << view_as<int>(LANGID_DUTCH)) | (1 << view_as<int>(LANGID_SWEDISH)) | (1 << view_as<int>(LANGID_NORWEGIAN)) | (1 << view_as<int>(LANGID_DANISH)))
-#define LANGMASK_SLAVIC_LANGUAGES	 ((1 << view_as<int>(LANGID_RUSSIAN)) | (1 << view_as<int>(LANGID_POLISH)) | (1 << view_as<int>(LANGID_CZECH)) | (1 << view_as<int>(LANGID_SLOVAK)) | (1 << view_as<int>(LANGID_BULGARIAN)) | (1 << view_as<int>(LANGID_UKRAINIAN)))
-#define LANGMASK_SPANISH_VARIANTS	 ((1 << view_as<int>(LANGID_SPANISH)) | (1 << view_as<int>(LANGID_LATAM)))
-#define LANGMASK_CHINESE_VARIANTS	 ((1 << view_as<int>(LANGID_SCHINESE)) | (1 << view_as<int>(LANGID_TCHINESE)))
+#define LANGMASK_ROMANCE_LANGUAGES     ((1 << view_as<int>(LANGID_SPANISH)) | (1 << view_as<int>(LANGID_LATAM)) | (1 << view_as<int>(LANGID_FRENCH)) | (1 << view_as<int>(LANGID_ITALIAN)) | (1 << view_as<int>(LANGID_PORTUGUESE)) | (1 << view_as<int>(LANGID_BRAZILIAN)) | (1 << view_as<int>(LANGID_ROMANIAN)))
+#define LANGMASK_GERMANIC_LANGUAGES     ((1 << view_as<int>(LANGID_ENGLISH)) | (1 << view_as<int>(LANGID_GERMAN)) | (1 << view_as<int>(LANGID_DUTCH)) | (1 << view_as<int>(LANGID_SWEDISH)) | (1 << view_as<int>(LANGID_NORWEGIAN)) | (1 << view_as<int>(LANGID_DANISH)))
+#define LANGMASK_SLAVIC_LANGUAGES     ((1 << view_as<int>(LANGID_RUSSIAN)) | (1 << view_as<int>(LANGID_POLISH)) | (1 << view_as<int>(LANGID_CZECH)) | (1 << view_as<int>(LANGID_SLOVAK)) | (1 << view_as<int>(LANGID_BULGARIAN)) | (1 << view_as<int>(LANGID_UKRAINIAN)))
+#define LANGMASK_SPANISH_VARIANTS     ((1 << view_as<int>(LANGID_SPANISH)) | (1 << view_as<int>(LANGID_LATAM)))
+#define LANGMASK_CHINESE_VARIANTS     ((1 << view_as<int>(LANGID_SCHINESE)) | (1 << view_as<int>(LANGID_TCHINESE)))
 #define LANGMASK_PORTUGUESE_VARIANTS ((1 << view_as<int>(LANGID_PORTUGUESE)) | (1 << view_as<int>(LANGID_BRAZILIAN)))
 
 /*****************************************************************
-			S T O C K   F U N C T I O N S
+            S T O C K   F U N C T I O N S
 *****************************************************************/
 
 /**
@@ -176,15 +176,15 @@ stock char sLanguageCodes[LANGID_SIZE][] = {
  */
 stock bool Lang_GetLanguageName(LanguageID langId, char[] sLangOut, int maxlength)
 {
-	int id = view_as<int>(langId);
-	if (id < 0 || id >= view_as<int>(LANGID_SIZE))
-	{
-		sLangOut[0] = '\0';
-		return false;
-	}
+    int id = view_as<int>(langId);
+    if (id < 0 || id >= view_as<int>(LANGID_SIZE))
+    {
+        sLangOut[0] = '\0';
+        return false;
+    }
 
-	strcopy(sLangOut, maxlength, sLanguageNames[id]);
-	return true;
+    strcopy(sLangOut, maxlength, sLanguageNames[id]);
+    return true;
 }
 
 /**
@@ -197,15 +197,15 @@ stock bool Lang_GetLanguageName(LanguageID langId, char[] sLangOut, int maxlengt
  */
 stock bool Lang_GetLanguageCode(LanguageID langId, char[] sCodeOut, int maxlength)
 {
-	int id = view_as<int>(langId);
-	if (id < 0 || id >= view_as<int>(LANGID_SIZE))
-	{
-		sCodeOut[0] = '\0';
-		return false;
-	}
+    int id = view_as<int>(langId);
+    if (id < 0 || id >= view_as<int>(LANGID_SIZE))
+    {
+        sCodeOut[0] = '\0';
+        return false;
+    }
 
-	strcopy(sCodeOut, maxlength, sLanguageCodes[id]);
-	return true;
+    strcopy(sCodeOut, maxlength, sLanguageCodes[id]);
+    return true;
 }
 
 /**
@@ -216,16 +216,16 @@ stock bool Lang_GetLanguageCode(LanguageID langId, char[] sCodeOut, int maxlengt
  */
 stock LanguageID Lang_FindByCode(const char[] sLangCode)
 {
-	for (int i = 0; i < view_as<int>(LANGID_SIZE); i++)
-	{
-		if (StrEqual(sLangCode, sLanguageCodes[i], false))
-		{
-			return view_as<LanguageID>(i);
-		}
-	}
+    for (int i = 0; i < view_as<int>(LANGID_SIZE); i++)
+    {
+        if (StrEqual(sLangCode, sLanguageCodes[i], false))
+        {
+            return view_as<LanguageID>(i);
+        }
+    }
 
-	// Fallback to English if not found
-	return LANGID_ENGLISH;
+    // Fallback to English if not found
+    return LANGID_ENGLISH;
 }
 
 /**
@@ -236,16 +236,16 @@ stock LanguageID Lang_FindByCode(const char[] sLangCode)
  */
 stock LanguageID Lang_FindByName(const char[] sLangName)
 {
-	for (int i = 0; i < view_as<int>(LANGID_SIZE); i++)
-	{
-		if (StrEqual(sLangName, sLanguageNames[i], false))
-		{
-			return view_as<LanguageID>(i);
-		}
-	}
+    for (int i = 0; i < view_as<int>(LANGID_SIZE); i++)
+    {
+        if (StrEqual(sLangName, sLanguageNames[i], false))
+        {
+            return view_as<LanguageID>(i);
+        }
+    }
 
-	// Fallback to English if not found
-	return LANGID_ENGLISH;
+    // Fallback to English if not found
+    return LANGID_ENGLISH;
 }
 
 /**
@@ -256,12 +256,12 @@ stock LanguageID Lang_FindByName(const char[] sLangName)
  */
 stock LanguageID Lang_GetClientLanguage(int client)
 {
-	if (client < 1 || client > MaxClients || !IsClientInGame(client) || IsFakeClient(client))
-	{
-		return LANGID_ENGLISH;
-	}
+    if (client < 1 || client > MaxClients || !IsClientInGame(client) || IsFakeClient(client))
+    {
+        return LANGID_ENGLISH;
+    }
 
-	return view_as<LanguageID>(GetClientLanguage(client));
+    return view_as<LanguageID>(GetClientLanguage(client));
 }
 
 /**
@@ -277,19 +277,19 @@ stock LanguageID Lang_GetClientLanguage(int client)
  */
 stock void Lang_GetSafeClientLanguage(int client, char[] sLangOut, int maxlength)
 {
-	// If client doesn't exist or is fake, use English
-	if (client < 1 || client > MaxClients || IsFakeClient(client))
-	{
-		strcopy(sLangOut, maxlength, "english");
-		return;
-	}
+    // If client doesn't exist or is fake, use English
+    if (client < 1 || client > MaxClients || IsFakeClient(client))
+    {
+        strcopy(sLangOut, maxlength, "english");
+        return;
+    }
 
-	LanguageID langId = view_as<LanguageID>(GetClientLanguage(client));
+    LanguageID langId = view_as<LanguageID>(GetClientLanguage(client));
 
-	char	   sLang[64];
-	GetLanguageInfo(view_as<int>(langId), _, _, sLang, sizeof(sLang));
+    char       sLang[64];
+    GetLanguageInfo(view_as<int>(langId), _, _, sLang, sizeof(sLang));
 
-	Lang_NormalizeLanguageName(sLang, sLangOut, maxlength);
+    Lang_NormalizeLanguageName(sLang, sLangOut, maxlength);
 }
 
 /**
@@ -301,13 +301,13 @@ stock void Lang_GetSafeClientLanguage(int client, char[] sLangOut, int maxlength
  */
 stock bool Lang_IsClientLanguage(int client, LanguageID targetLang)
 {
-	if (client < 1 || client > MaxClients || !IsClientInGame(client) || IsFakeClient(client))
-	{
-		return false;
-	}
+    if (client < 1 || client > MaxClients || !IsClientInGame(client) || IsFakeClient(client))
+    {
+        return false;
+    }
 
-	LanguageID clientLang = view_as<LanguageID>(GetClientLanguage(client));
-	return (clientLang == targetLang);
+    LanguageID clientLang = view_as<LanguageID>(GetClientLanguage(client));
+    return (clientLang == targetLang);
 }
 
 /**
@@ -318,17 +318,17 @@ stock bool Lang_IsClientLanguage(int client, LanguageID targetLang)
  */
 stock bool Lang_IsClientSpanish(int client)
 {
-	if (client < 1 || client > MaxClients || !IsClientInGame(client) || IsFakeClient(client))
-	{
-		return false;
-	}
+    if (client < 1 || client > MaxClients || !IsClientInGame(client) || IsFakeClient(client))
+    {
+        return false;
+    }
 
-	LanguageID clientLang = view_as<LanguageID>(GetClientLanguage(client));
-	return (clientLang == LANGID_SPANISH || clientLang == LANGID_LATAM);
+    LanguageID clientLang = view_as<LanguageID>(GetClientLanguage(client));
+    return (clientLang == LANGID_SPANISH || clientLang == LANGID_LATAM);
 }
 
 /*****************************************************************
-			V A L V E   T R A N S L A T I O N   H E L P E R S
+            V A L V E   T R A N S L A T I O N   H E L P E R S
 *****************************************************************/
 
 /**
@@ -344,41 +344,41 @@ stock bool Lang_IsClientSpanish(int client)
  */
 stock bool Lang_GetValveTranslation(int client, const char[] valveKey, char[] translation, int maxlength, Localizer localizer = null)
 {
-	// If no localizer instance provided, try to use global
-	if (localizer == null)
-	{
-		// Plugin using this library must define its own instance
-		LogError("[Lang_GetValveTranslation] No Localizer instance provided. Plugin must pass its own Localizer instance.");
-		return false;
-	}
+    // If no localizer instance provided, try to use global
+    if (localizer == null)
+    {
+        // Plugin using this library must define its own instance
+        LogError("[Lang_GetValveTranslation] No Localizer instance provided. Plugin must pass its own Localizer instance.");
+        return false;
+    }
 
-	if (!localizer.IsReady())
-	{
-		return false;
-	}
+    if (!localizer.IsReady())
+    {
+        return false;
+    }
 
-	char sLang[64];
-	char keyBuffer[256];
-	strcopy(keyBuffer, sizeof(keyBuffer), valveKey);
+    char sLang[64];
+    char keyBuffer[256];
+    strcopy(keyBuffer, sizeof(keyBuffer), valveKey);
 
-	Lang_GetSafeClientLanguage(client, sLang, sizeof(sLang));
+    Lang_GetSafeClientLanguage(client, sLang, sizeof(sLang));
 
-	// Try to translate in the client's language
-	if (localizer.PhraseTranslateToLang(keyBuffer, translation, maxlength, client, sLang))
-	{
-		return true;
-	}
+    // Try to translate in the client's language
+    if (localizer.PhraseTranslateToLang(keyBuffer, translation, maxlength, client, sLang))
+    {
+        return true;
+    }
 
-	// Fallback to English if it fails
-	if (!StrEqual(sLang, "english", false))
-	{
-		if (localizer.PhraseTranslateToLang(keyBuffer, translation, maxlength, client, "english"))
-		{
-			return true;
-		}
-	}
+    // Fallback to English if it fails
+    if (!StrEqual(sLang, "english", false))
+    {
+        if (localizer.PhraseTranslateToLang(keyBuffer, translation, maxlength, client, "english"))
+        {
+            return true;
+        }
+    }
 
-	return false;
+    return false;
 }
 
 /**
@@ -393,26 +393,26 @@ stock bool Lang_GetValveTranslation(int client, const char[] valveKey, char[] tr
  */
 stock bool Lang_GetValveTranslationForLanguage(LanguageID langId, const char[] valveKey, char[] translation, int maxlength, Localizer localizer)
 {
-	if (localizer == null || !localizer.IsReady())
-	{
-		return false;
-	}
+    if (localizer == null || !localizer.IsReady())
+    {
+        return false;
+    }
 
-	char sLang[64];
-	char keyBuffer[256];
+    char sLang[64];
+    char keyBuffer[256];
 
-	if (!Lang_GetLanguageName(langId, sLang, sizeof(sLang)))
-	{
-		return false;
-	}
+    if (!Lang_GetLanguageName(langId, sLang, sizeof(sLang)))
+    {
+        return false;
+    }
 
-	strcopy(keyBuffer, sizeof(keyBuffer), valveKey);
+    strcopy(keyBuffer, sizeof(keyBuffer), valveKey);
 
-	return localizer.PhraseTranslateToLang(keyBuffer, translation, maxlength, LANG_SERVER, sLang);
+    return localizer.PhraseTranslateToLang(keyBuffer, translation, maxlength, LANG_SERVER, sLang);
 }
 
 /*****************************************************************
-			L A N G U A G E   N O R M A L I Z A T I O N
+            L A N G U A G E   N O R M A L I Z A T I O N
 *****************************************************************/
 
 /**
@@ -426,18 +426,18 @@ stock bool Lang_GetValveTranslationForLanguage(LanguageID langId, const char[] v
  */
 stock void Lang_NormalizeLanguageName(const char[] input, char[] output, int maxlength)
 {
-	if (StrEqual(input, "latam", false))
-	{
-		strcopy(output, maxlength, "spanish");
-	}
-	else
-	{
-		strcopy(output, maxlength, input);
-	}
+    if (StrEqual(input, "latam", false))
+    {
+        strcopy(output, maxlength, "spanish");
+    }
+    else
+    {
+        strcopy(output, maxlength, input);
+    }
 }
 
 /*****************************************************************
-			U T I L I T Y   F U N C T I O N S
+            U T I L I T Y   F U N C T I O N S
 *****************************************************************/
 
 /**
@@ -447,7 +447,7 @@ stock void Lang_NormalizeLanguageName(const char[] input, char[] output, int max
  */
 stock int Lang_GetLanguageCount()
 {
-	return view_as<int>(LANGID_SIZE);
+    return view_as<int>(LANGID_SIZE);
 }
 
 /**
@@ -458,8 +458,8 @@ stock int Lang_GetLanguageCount()
  */
 stock bool Lang_IsValidLanguageID(LanguageID langId)
 {
-	int id = view_as<int>(langId);
-	return (id >= 0 && id < view_as<int>(LANGID_SIZE));
+    int id = view_as<int>(langId);
+    return (id >= 0 && id < view_as<int>(LANGID_SIZE));
 }
 
 /**
@@ -470,15 +470,15 @@ stock bool Lang_IsValidLanguageID(LanguageID langId)
  */
 stock LanguageID Lang_SMLanguageToEnum(int smLangId)
 {
-	if (smLangId >= 0 && smLangId < view_as<int>(LANGID_SIZE))
-	{
-		return view_as<LanguageID>(smLangId);
-	}
-	return LANGID_ENGLISH;
+    if (smLangId >= 0 && smLangId < view_as<int>(LANGID_SIZE))
+    {
+        return view_as<LanguageID>(smLangId);
+    }
+    return LANGID_ENGLISH;
 }
 
 /*****************************************************************
-			Q U I C K   L A N G U A G E   C H E C K S
+            Q U I C K   L A N G U A G E   C H E C K S
 *****************************************************************/
 
 /**
@@ -504,8 +504,8 @@ stock LanguageID Lang_SMLanguageToEnum(int smLangId)
  */
 stock bool Lang_IsLanguageInMask(LanguageID langId, int targetMask)
 {
-	int id = view_as<int>(langId);
-	return (id >= 0 && id < 32 && (targetMask & (1 << id)) != 0);
+    int id = view_as<int>(langId);
+    return (id >= 0 && id < 32 && (targetMask & (1 << id)) != 0);
 }
 
 /**
@@ -517,11 +517,11 @@ stock bool Lang_IsLanguageInMask(LanguageID langId, int targetMask)
  */
 stock bool Lang_UsesSpanishLocalization(LanguageID langId)
 {
-	return Lang_IsSpanishVariant(langId);
+    return Lang_IsSpanishVariant(langId);
 }
 
 /*****************************************************************
-			U T I L I T Y   F U N C T I O N S
+            U T I L I T Y   F U N C T I O N S
 *****************************************************************/
 
 /**
@@ -537,40 +537,40 @@ stock bool Lang_UsesSpanishLocalization(LanguageID langId)
  */
 stock bool Lang_GetLocalizedTeamName(any team, int client, char[] buffer, int maxlength, Localizer localizer = null)
 {
-	char sKey[64];
-	char sFallback[32];
+    char sKey[64];
+    char sFallback[32];
 
-	switch (team)
-	{
-		case 2:
-		{
-			strcopy(sKey, sizeof(sKey), "#Cstrike_TitlesTXT_Terrorist_Forces");
-			strcopy(sFallback, sizeof(sFallback), "Survivor");
-		}
-		case 3:
-		{
-			strcopy(sKey, sizeof(sKey), "#Cstrike_TitlesTXT_CT_Forces");
-			strcopy(sFallback, sizeof(sFallback), "Infected");
-		}
-		case 1:
-		{
-			strcopy(sKey, sizeof(sKey), "#L4D360UI_Spectate");
-			strcopy(sFallback, sizeof(sFallback), "Spectator");
-		}
-		default:
-		{
-			strcopy(sKey, sizeof(sKey), "#L4D360UI_Spectate");
-			strcopy(sFallback, sizeof(sFallback), "Spectator");
-		}
-	}
+    switch (team)
+    {
+        case 2:
+        {
+            strcopy(sKey, sizeof(sKey), "#Cstrike_TitlesTXT_Terrorist_Forces");
+            strcopy(sFallback, sizeof(sFallback), "Survivor");
+        }
+        case 3:
+        {
+            strcopy(sKey, sizeof(sKey), "#Cstrike_TitlesTXT_CT_Forces");
+            strcopy(sFallback, sizeof(sFallback), "Infected");
+        }
+        case 1:
+        {
+            strcopy(sKey, sizeof(sKey), "#L4D360UI_Spectate");
+            strcopy(sFallback, sizeof(sFallback), "Spectator");
+        }
+        default:
+        {
+            strcopy(sKey, sizeof(sKey), "#L4D360UI_Spectate");
+            strcopy(sFallback, sizeof(sFallback), "Spectator");
+        }
+    }
 
-	if (localizer != null && Lang_GetValveTranslation(client, sKey, buffer, maxlength, localizer))
-	{
-		return true;
-	}
+    if (localizer != null && Lang_GetValveTranslation(client, sKey, buffer, maxlength, localizer))
+    {
+        return true;
+    }
 
-	strcopy(buffer, maxlength, sFallback);
-	return false;
+    strcopy(buffer, maxlength, sFallback);
+    return false;
 }
 
 /**
@@ -585,7 +585,7 @@ stock bool Lang_GetLocalizedTeamName(any team, int client, char[] buffer, int ma
  */
 stock bool Lang_IsRomanceLanguage(LanguageID langId)
 {
-	return Lang_IsLanguageInMask(langId, LANGMASK_ROMANCE_LANGUAGES);
+    return Lang_IsLanguageInMask(langId, LANGMASK_ROMANCE_LANGUAGES);
 }
 
 /**
@@ -596,7 +596,7 @@ stock bool Lang_IsRomanceLanguage(LanguageID langId)
  */
 stock bool Lang_IsGermanicLanguage(LanguageID langId)
 {
-	return Lang_IsLanguageInMask(langId, LANGMASK_GERMANIC_LANGUAGES);
+    return Lang_IsLanguageInMask(langId, LANGMASK_GERMANIC_LANGUAGES);
 }
 
 /**
@@ -607,7 +607,7 @@ stock bool Lang_IsGermanicLanguage(LanguageID langId)
  */
 stock bool Lang_IsSlavicLanguage(LanguageID langId)
 {
-	return Lang_IsLanguageInMask(langId, LANGMASK_SLAVIC_LANGUAGES);
+    return Lang_IsLanguageInMask(langId, LANGMASK_SLAVIC_LANGUAGES);
 }
 
 /**
@@ -618,7 +618,7 @@ stock bool Lang_IsSlavicLanguage(LanguageID langId)
  */
 stock bool Lang_IsSpanishVariant(LanguageID langId)
 {
-	return Lang_IsLanguageInMask(langId, LANGMASK_SPANISH_VARIANTS);
+    return Lang_IsLanguageInMask(langId, LANGMASK_SPANISH_VARIANTS);
 }
 
 /**
@@ -629,7 +629,7 @@ stock bool Lang_IsSpanishVariant(LanguageID langId)
  */
 stock bool Lang_IsChineseVariant(LanguageID langId)
 {
-	return Lang_IsLanguageInMask(langId, LANGMASK_CHINESE_VARIANTS);
+    return Lang_IsLanguageInMask(langId, LANGMASK_CHINESE_VARIANTS);
 }
 
 /**
@@ -640,5 +640,5 @@ stock bool Lang_IsChineseVariant(LanguageID langId)
  */
 stock bool Lang_IsPortugueseVariant(LanguageID langId)
 {
-	return Lang_IsLanguageInMask(langId, LANGMASK_PORTUGUESE_VARIANTS);
+    return Lang_IsLanguageInMask(langId, LANGMASK_PORTUGUESE_VARIANTS);
 }
