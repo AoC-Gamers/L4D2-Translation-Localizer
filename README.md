@@ -25,20 +25,26 @@ Este proyecto proporciona dos librerías especializadas que trabajan en conjunto
 - ✅ **Sistema de fallback** en múltiples niveles
 - ✅ **Herramientas de debug** integradas
 
-## 📦 Instalación
+## 📦 Uso en un plugin
 
-1. Copia las librerías a tu directorio `scripting/include/`:
+1. Copia los dos archivos desde el directorio
+   [`addons/sourcemod/scripting/include/`](addons/sourcemod/scripting/include/)
+   de la revisión elegida al `scripting/include/` del plugin consumidor.
    ```
    addons/sourcemod/scripting/include/
    ├── language_manager.inc
    └── campaign_manager.inc
    ```
 
-2. Incluye las librerías en tu plugin:
+2. Incluye las librerías en tu plugin y recompílalo.
    ```sourcepawn
    #include <language_manager>
    #include <campaign_manager>
    ```
+
+El plugin consumidor incorpora los stocks al compilar. SM-Localizer y
+Left4DHooks se obtienen por separado para compilar y ejecutar las funciones que
+usan sus natives.
 
 ## 🔧 Dependencias
 
@@ -125,6 +131,12 @@ El sistema funciona automáticamente con cualquier mapa que siga la convención 
 
 - **Autor**: lechuga
 - **Organización**: AoC-Gamers
+
+## Licencia
+
+El código propio de L4D2 Translation Localizer se distribuye bajo la
+[GPL-3.0 o posterior](LICENSE). Sus dependencias externas conservan
+sus licencias.
 
 ---
 

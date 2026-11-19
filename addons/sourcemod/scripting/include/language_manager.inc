@@ -6,6 +6,8 @@
  * and client language detection with automatic fallbacks.
  *
  * Author: lechuga
+ * SPDX-FileCopyrightText: 2025 lechuga
+ * SPDX-License-Identifier: GPL-3.0-or-later
  * Version: 1.0.0
  *
  * Features:

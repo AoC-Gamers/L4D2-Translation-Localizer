@@ -6,6 +6,8 @@
  * and Valve translation integration for missions and chapters.
  *
  * Author: lechuga
+ * SPDX-FileCopyrightText: 2025 lechuga
+ * SPDX-License-Identifier: GPL-3.0-or-later
  * Version: 2.0.0
  *
  * Dependencies:
