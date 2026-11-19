@@ -2,30 +2,30 @@
 
 Sistema completo de localización y gestión de traducciones para Left 4 Dead 2 en SourceMod.
 
-## 📋 Descripción
+## Descripción
 
 Este proyecto proporciona dos librerías especializadas que trabajan en conjunto para ofrecer un sistema robusto de traducciones localizadas para plugins de Left 4 Dead 2:
 
 - **`language_manager.inc`** - Gestión completa de idiomas y traducciones Valve
 - **`campaign_manager.inc`** - Procesamiento dinámico de campañas y capítulos
 
-## 🚀 Características Principales
+## Características Principales
 
 ### Language Manager
-- ✅ **33 idiomas soportados** con enumeración completa
-- ✅ **Traducciones Valve** con fallback automático a inglés
-- ✅ **Normalización automática** LATAM → Spanish
-- ✅ **Máscaras de bits** para verificaciones optimizadas de familias lingüísticas
-- ✅ **Detección robusta** del idioma del cliente
+- **33 idiomas soportados** con enumeración completa
+- **Traducciones Valve** con fallback automático a inglés
+- **Normalización automática** LATAM → Spanish
+- **Máscaras de bits** para verificaciones optimizadas de familias lingüísticas
+- **Detección robusta** del idioma del cliente
 
 ### Campaign Manager  
-- ✅ **Procesamiento dinámico** de códigos de mapa sin hardcoding
-- ✅ **Traducciones contextuales** por modo de juego (COOP, VERSUS, etc.)
-- ✅ **Soporte completo** para campañas oficiales y personalizadas
-- ✅ **Sistema de fallback** en múltiples niveles
-- ✅ **Herramientas de debug** integradas
+- **Procesamiento dinámico** de códigos de mapa sin hardcoding
+- **Traducciones contextuales** por modo de juego (COOP, VERSUS, etc.)
+- **Soporte completo** para campañas oficiales y personalizadas
+- **Sistema de fallback** en múltiples niveles
+- **Herramientas de debug** integradas
 
-## 📦 Uso en un plugin
+## Uso en un plugin
 
 1. Copia los dos archivos desde el directorio
    [`addons/sourcemod/scripting/include/`](addons/sourcemod/scripting/include/)
@@ -46,7 +46,7 @@ El plugin consumidor incorpora los stocks al compilar. SM-Localizer y
 Left4DHooks se obtienen por separado para compilar y ejecutar las funciones que
 usan sus natives.
 
-## 🔧 Dependencias
+## Dependencias
 
 ### Requeridas
 - **SourceMod 1.11+**
@@ -56,13 +56,13 @@ usan sus natives.
 ### Opcionales
 - **MultiColors** - Para mensajes coloreados en chat
 
-## 📚 Documentación Detallada
+## Documentación Detallada
 
 - **[Language Manager](docs/language_manager.md)** - API completa y ejemplos de uso
 - **[Campaign Manager](docs/campaign_manager.md)** - Funciones de procesamiento de mapas
 - **[Ejemplos de Integración](docs/examples.md)** - Casos de uso prácticos
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 ```
 ┌─────────────────────┐    ┌─────────────────────┐
@@ -84,7 +84,7 @@ usan sus natives.
 └─────────────────────┘    └─────────────────────┘
 ```
 
-## 🎮 Mapas Soportados
+## Mapas Soportados
 
 ### Campañas Oficiales
 - **C1** - Dead Center
@@ -105,7 +105,7 @@ usan sus natives.
 ### Mapas Personalizados
 El sistema funciona automáticamente con cualquier mapa que siga la convención `c[número]m[número]_nombre`.
 
-## 🌍 Idiomas Soportados
+## Idiomas Soportados
 
 | Código | Idioma | Código | Idioma |
 |--------|--------|--------|--------|
@@ -127,7 +127,7 @@ El sistema funciona automáticamente con cualquier mapa que siga la convención 
 | `ua` | Ukrainian | `vi` | Vietnamese |
 | `zho` | Traditional Chinese | | |
 
-## ✨ Créditos
+## Créditos
 
 - **Autor**: lechuga
 - **Organización**: AoC-Gamers
