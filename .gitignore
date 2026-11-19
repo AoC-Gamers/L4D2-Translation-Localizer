@@ -1,0 +1,13 @@
+# Local dependencies, generated artifacts and scratch work
+/tmp/
+
+# Editors, operating system and backups
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.bak
+*.backup
