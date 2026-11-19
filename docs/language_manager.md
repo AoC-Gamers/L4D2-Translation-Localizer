@@ -2,11 +2,11 @@
 
 Sistema completo de gestión de idiomas para SourceMod con soporte para 33 idiomas y traducciones Valve.
 
-## 📋 Descripción General
+## Descripción General
 
 `language_manager.inc` es una librería optimizada que proporciona una API unificada para el manejo de idiomas en plugins de SourceMod, con especial énfasis en Left 4 Dead 2. Incluye soporte completo para traducciones Valve, normalización automática de idiomas y verificaciones optimizadas por familias lingüísticas.
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 ### Enumeración LanguageID
 ```sourcepawn
@@ -31,7 +31,7 @@ enum LanguageID
 #define LANGMASK_SLAVIC_LANGUAGES    // Ruso, Polaco, Checo, etc.
 ```
 
-## 🔧 API de Funciones
+## API de Funciones
 
 ### Funciones de Búsqueda y Conversión
 
@@ -365,7 +365,7 @@ bool Lang_IsPortugueseVariant(LanguageID langId)
 
 **Variantes:** Portugués, Brasileño
 
-## 📝 Ejemplos Prácticos
+## Ejemplos Prácticos
 
 ### Sistema de Bienvenida Multiidioma
 
@@ -446,7 +446,7 @@ public Action CMD_LangStats(int client, int args)
 }
 ```
 
-## 🔍 Debugging y Troubleshooting
+## Debugging y Troubleshooting
 
 ### Problemas Comunes
 
@@ -502,22 +502,22 @@ public void DebugClientLanguage(int client)
 }
 ```
 
-## 📊 Performance y Optimización
+## Performance y Optimización
 
 ### Mejores Prácticas
 
 1. **Usar macros para verificaciones frecuentes:**
 ```sourcepawn
-// ✅ Rápido (macro inline)
+// Rápido (macro inline)
 if (Lang_IsSpanish(clientLang)) { }
 
-// ❌ Más lento (llamada a función)
+// Más lento (llamada a función)
 if (Lang_IsClientLanguage(client, LANGID_SPANISH)) { }
 ```
 
 2. **Cache el idioma del cliente:**
 ```sourcepawn
-// ✅ Cache una vez
+// Cache una vez
 char g_ClientLang[MAXPLAYERS + 1][32];
 
 public void OnClientPostAdminCheck(int client)
@@ -528,10 +528,10 @@ public void OnClientPostAdminCheck(int client)
 
 3. **Usar máscaras de bits para múltiples verificaciones:**
 ```sourcepawn
-// ✅ Una operación bit a bit
+// Una operación bit a bit
 if (Lang_IsRomanceLanguage(clientLang)) { }
 
-// ❌ Múltiples comparaciones
+// Múltiples comparaciones
 if (clientLang == LANGID_SPANISH || clientLang == LANGID_FRENCH || ...) { }
 ```
 

@@ -2,10 +2,10 @@
 
 Ejemplos prácticos de uso conjunto de `language_manager.inc` y `campaign_manager.inc` en plugins reales.
 
-> **⚠️ NOTA IMPORTANTE**: Estos ejemplos usan SM-Localizer para acceder a traducciones Valve intrínsecas del juego. 
+> **NOTA IMPORTANTE**: Estos ejemplos usan SM-Localizer para acceder a traducciones Valve intrínsecas del juego.
 > El constructor `new Localizer()` sin parámetros inicializa el sistema para usar traducciones oficiales de Valve.
 
-## 📋 Plugin Base Template
+## Plugin Base Template
 
 ### Estructura Básica
 ```sourcepawn
@@ -57,7 +57,7 @@ public void OnAllPluginsLoaded()
 }
 ```
 
-## 🎮 Ejemplo 1: Sistema de Bienvenida Avanzado
+## Ejemplo 1: Sistema de Bienvenida Avanzado
 
 ### Plugin Completo: Welcome System
 ```sourcepawn
@@ -146,7 +146,7 @@ public Action Timer_WelcomeClient(Handle timer, int userid)
 }
 ```
 
-## 🗺️ Ejemplo 2: Sistema de Votación de Mapas
+## Ejemplo 2: Sistema de Votación de Mapas
 
 ### Plugin: Advanced Map Voting
 ```sourcepawn
@@ -487,7 +487,7 @@ int GetFirstValidClient()
 }
 ```
 
-## 📊 Ejemplo 3: Sistema de Estadísticas Avanzado
+## Ejemplo 3: Sistema de Estadísticas Avanzado
 
 ### Plugin: Player Statistics with Localization
 ```sourcepawn
@@ -819,7 +819,7 @@ void GetEnglishLanguageName(LanguageID langId, char[] buffer, int maxlength)
 }
 ```
 
-## 🏆 Ejemplo 4: Sistema de Logros Localizados
+## Ejemplo 4: Sistema de Logros Localizados
 
 ### Plugin: Achievement System
 ```sourcepawn
@@ -948,19 +948,19 @@ void UnlockAchievement(int client, int achievementIndex)
     // Anuncio personalizado por idioma
     if (Lang_IsSpanishVariant(clientLang))
     {
-        PrintToChatAll("\x04🏆 ¡%N ha desbloqueado el logro \x03%s\x04!", client, title);
+        PrintToChatAll("\x04¡%N ha desbloqueado el logro \x03%s\x04!", client, title);
         PrintToChat(client, "\x01%s", description);
         PrintToChat(client, "\x05¡Felicitaciones por tu logro!");
     }
     else if (Lang_IsFrench(clientLang))
     {
-        PrintToChatAll("\x04🏆 %N a débloqué le succès \x03%s\x04!", client, title);
+        PrintToChatAll("\x04%N a débloqué le succès \x03%s\x04!", client, title);
         PrintToChat(client, "\x01%s", description);
         PrintToChat(client, "\x05Félicitations pour votre réussite!");
     }
     else
     {
-        PrintToChatAll("\x04🏆 %N unlocked achievement \x03%s\x04!", client, title);
+        PrintToChatAll("\x04%N unlocked achievement \x03%s\x04!", client, title);
         PrintToChat(client, "\x01%s", description);
         PrintToChat(client, "\x05Congratulations on your achievement!");
     }
@@ -1022,13 +1022,13 @@ void ShowAchievementMenu(int client)
         
         if (g_Achievements[i].isUnlocked[client])
         {
-            Format(menuItem, sizeof(menuItem), "✅ %s", title);
+            Format(menuItem, sizeof(menuItem), "%s", title);
         }
         else
         {
             int current = g_Achievements[i].progress[client];
             int required = g_Achievements[i].requirement;
-            Format(menuItem, sizeof(menuItem), "⬜ %s (%d/%d)", title, current, required);
+            Format(menuItem, sizeof(menuItem), "%s (%d/%d)", title, current, required);
         }
         
         char indexStr[8];
@@ -1072,22 +1072,22 @@ void ShowAchievementDetails(int client, int achievementIndex)
     {
         if (Lang_IsSpanishVariant(clientLang))
         {
-            PrintToChat(client, "\x04✅ Logro Desbloqueado:");
+            PrintToChat(client, "\x04Logro Desbloqueado:");
         }
         else
         {
-            PrintToChat(client, "\x04✅ Achievement Unlocked:");
+            PrintToChat(client, "\x04Achievement Unlocked:");
         }
     }
     else
     {
         if (Lang_IsSpanishVariant(clientLang))
         {
-            PrintToChat(client, "\x04⬜ Logro Bloqueado:");
+            PrintToChat(client, "\x04Logro Bloqueado:");
         }
         else
         {
-            PrintToChat(client, "\x04⬜ Achievement Locked:");
+            PrintToChat(client, "\x04Achievement Locked:");
         }
     }
     
@@ -1215,7 +1215,7 @@ int FindAchievementIndex(const char[] identifier)
 }
 ```
 
-## 🎯 Mejores Prácticas de Integración
+## Mejores Prácticas de Integración
 
 ### 1. Inicialización Correcta
 ```sourcepawn
@@ -1307,7 +1307,7 @@ public Action Timer_ClearCache(Handle timer)
 }
 ```
 
-## 🔧 Debugging y Testing
+## Debugging y Testing
 
 ### Sistema de Debug Unificado
 ```sourcepawn

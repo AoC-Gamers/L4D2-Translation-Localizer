@@ -2,11 +2,11 @@
 
 Sistema dinámico de gestión de campañas y capítulos para Left 4 Dead 2 con traducciones localizadas.
 
-## 📋 Descripción General
+## Descripción General
 
 `campaign_manager.inc` es una librería especializada que procesa códigos de mapas de Left 4 Dead 2 para generar nombres localizados de campañas y capítulos. Utiliza un sistema dinámico sin hardcoding que funciona con campañas oficiales y personalizadas, generando automáticamente las claves de traducción Valve correspondientes.
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 ### Constantes y Definiciones
 ```sourcepawn
@@ -37,7 +37,7 @@ Input: "L4D2C5M4_quarter"
 "#L4D360UI_CampaignName_C5"
 ```
 
-## 🔧 API de Funciones
+## API de Funciones
 
 ### Funciones de Parsing de Códigos
 
@@ -440,7 +440,7 @@ Campaign_DebugMapCode("c1m1_hotel", client, g_Localizer);
 */
 ```
 
-## 📝 Ejemplos Prácticos
+## Ejemplos Prácticos
 
 ### Sistema de Información de Mapa Actual
 
@@ -678,7 +678,7 @@ public Action CMD_CampaignStats(int client, int args)
 }
 ```
 
-## 🔍 Debugging y Troubleshooting
+## Debugging y Troubleshooting
 
 ### Problemas Comunes
 
@@ -718,11 +718,11 @@ public void DiagnoseTranslation(int client, const char[] mapCode)
     char result[64];
     if (Lang_GetValveTranslation(client, translationKey, result, sizeof(result), g_Localizer))
     {
-        LogMessage("✅ Traducción encontrada: %s → %s", translationKey, result);
+        LogMessage("Traducción encontrada: %s → %s", translationKey, result);
     }
     else
     {
-        LogWarning("❌ Traducción no encontrada: %s", translationKey);
+        LogWarning("Traducción no encontrada: %s", translationKey);
         LogWarning("Posibles causas:");
         LogWarning("  - Localizer no está listo");
         LogWarning("  - Clave no existe en archivos de traducción");
@@ -745,9 +745,9 @@ public void DiagnoseGameMode()
     switch (gameMode)
     {
         case GAMEMODE_COOP, GAMEMODE_VERSUS, GAMEMODE_SURVIVAL, GAMEMODE_SCAVENGE:
-            LogMessage("✅ Modo válido");
+            LogMessage("Modo válido");
         default:
-            LogWarning("❌ Modo desconocido, usando COOP como fallback");
+            LogWarning("Modo desconocido, usando COOP como fallback");
     }
 }
 ```
@@ -808,7 +808,7 @@ public Action CMD_DebugPipeline(int client, int args)
 }
 ```
 
-## 📊 Performance y Optimización
+## Performance y Optimización
 
 ### Mejores Prácticas
 
@@ -840,7 +840,7 @@ bool GetCachedCampaignCode(const char[] mapCode, char[] campaignCode, int maxlen
 
 2. **Evitar procesamiento repetitivo:**
 ```sourcepawn
-// ❌ Ineficiente
+// Ineficiente
 public void OnGameFrame()
 {
     char currentMap[64];
@@ -848,7 +848,7 @@ public void OnGameFrame()
     Campaign_ExtractCampaignCode(currentMap, ...); // Se ejecuta cada frame
 }
 
-// ✅ Eficiente
+// Eficiente
 char g_CurrentCampaignCode[8];
 
 public void OnMapStart()
@@ -866,7 +866,7 @@ public void OnMapStart()
 #endif
 ```
 
-## 🌍 Mapeo de Campañas Oficiales
+## Mapeo de Campañas Oficiales
 
 ### Campañas L4D2 Originales
 | Código | Nombre Inglés | Clave de Traducción |
